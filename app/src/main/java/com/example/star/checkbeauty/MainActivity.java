@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button showBtn;
     private ImageView showImg;
@@ -47,9 +47,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.button:
                 if (curPos > maxPos){
                     curPos = 0;
+                } else {
+                    loader.load(showImg, urls.get(curPos));
+                    curPos++;
                 }
-                loader.load(showImg, urls.get(curPos));
-                curPos++;
                 break;
         }
     }

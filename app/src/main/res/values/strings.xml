@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CheckBeauty</string>
+    <string name="button_name">下一张</string>
 </resources>
